@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #99E2D0;
+}
+
+h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 4em;
+  margin: 8% 0 8% 0;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+header .fa-arrow-left-long {
+  font-size: 5em;
+  float: left;
+  line-height: 125%;
+  margin: 0 0 0 3%;
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 4em;
+  margin: 2%;
+}
+
+.img-restaurant {
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+section {
+  background-color: rgb(240, 240, 240);
+  border-radius: 12%/4%;
+  padding: 2% 4% 5% 4%;
+  margin-top: -18%;
+  position: relative;
+}
+
+.menu {
+  margin: 0 0 10% 0;
+}
+
+.article-menu {
+  background-color: #fff;
+  border-radius: 5%/20%;
+  margin: 3% 0 3% 0;
+  padding: 2%;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.plat {
+  font-weight: bold;
+}
+
+.btn {
+  color: #fff;
+  font-size: 3em;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 15%/50%;
+  margin: 10% auto 20% auto;
+  padding: 4% 7% 4% 7%;
+  text-align: center;
+  width: 40%;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.5);
+}
+.btn:hover {
+  background: linear-gradient(#fc85da, #9f71d8);
+}
+
+footer {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  padding: 7% 0 7% 7%;
+  aspect-ratio: 7/3;
+}
+footer h4 {
+  margin: 0 0 5% 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+  font-weight: 100;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  margin: 2% 0 2% 0;
+}
+
+/*# sourceMappingURL=style.css.map */
