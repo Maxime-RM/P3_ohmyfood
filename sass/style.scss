@@ -1,27 +1,52 @@
+$primaire: #9356DC;
+$primaire-claire: #b656dc;
+
+$secondaire: #FF79DA;
+$secondaire-claire: #ff79b1;
+
+$tertiaire: #99E2D0;
+
+$couleur-background: #f5f5f5;
+
+$couleur-box-shadow: 1px 5px 35px #00000075;
+$couleur-box-shadow-sombre: 1px 5px 45px #000000;
+
+$couleur-lien: #000000;
+
+$couleur-article-menu: #ffffff;
+
+$couleur-police-btn: #ffffff;
+
+$couleur-footer: #313131;
+$couleur-police-footer: #ffffff;
+
+
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+
 a{
     text-decoration: none;
-    &:visited{
-        text-decoration: none;
-        color: black;
-    }
+    color: $couleur-lien;
     &:hover{
-        color: #99E2D0;
+        color: $primaire;
+        
     }
 }
-h2{
-    font-family: 'Shrikhand', cursive;
-    font-size: 4em;
-    margin: 8% 0 8% 0;
-}
+
+
 p{
-    margin: 0;
+    margin: 1% 0 1% 0;
+    font-size: 1.5rem;
 }
+
+
 header{
     text-align: center;
+    background-color: $couleur-background;
+    padding: 2%;
     .fa-arrow-left-long{
         font-size: 5em;
         float: left;
@@ -31,54 +56,97 @@ header{
     h1{
         font-family: 'Shrikhand', cursive;
         font-size: 4em;
-        margin: 2%;
+        margin: 0;
     }
 }
+
+
 .img-restaurant{
     aspect-ratio: 4/3;
     width: 100%;
 }
+
+
 section{
-    background-color: rgb(240, 240, 240);
+    background-color: $couleur-background;
     border-radius: 12%/4%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     padding: 2% 4% 5% 4%;
     margin-top: -18%;
     position: relative;
 }
+h2{
+    font-family: 'Shrikhand', cursive;
+    font-size: 4em;
+    margin: 0;
+}
+.nom-restaurant{
+    padding: 8% 2% 8% 0;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-heart{
+    font-size: 6em;
+}
 .menu{
     margin: 0 0 10% 0;
 }
+
+h3{
+    position: relative;
+    margin: 7% 0 7% 0;
+}
+h3:after{ 
+    content: ""; 
+    position: absolute; 
+    width: 13%; 
+    height: 1px; 
+    bottom: -1.2em; 
+    left: 0; 
+    border-bottom: 0.5em solid $tertiaire; 
+}
+
 .article-menu{
-    background-color: #fff;
+    background-color: $couleur-article-menu;
     border-radius: 5% / 20%;
     margin: 3% 0 3% 0;
-    padding: 2%;
-    box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.100);
+    padding: 3%;
+    box-shadow: $couleur-box-shadow;
 }
 .plat{
     font-weight: bold;
 }
+.box-menu{
+    display: flex;
+    justify-content: space-between;
+    p{
+        font-size: 2.7em;
+    }
+}
+.prix{
+    font-weight: bold;
+}
 .btn {
 
-    color: #fff;
+    color: $couleur-police-btn;
     font-size: 3em;
-    background: linear-gradient(#FF79DA,#9356DC);
+    background: linear-gradient($secondaire,$primaire);
     border-radius: 15% / 50%;
     margin: 10% auto 20% auto;
     padding: 4% 7% 4% 7%;
     text-align: center;
     width: 40%;
-    box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: $couleur-box-shadow;
     &:hover{
-        background: linear-gradient(#fc85da,#9f71d8);
-
+        background: linear-gradient($secondaire-claire,$primaire-claire);
+        box-shadow: $couleur-box-shadow-sombre;
     }
 }
 
 footer {
     
-    background-color: rgb(50, 50, 50);
-    color: white;
+    background-color: $couleur-footer;
     padding: 7% 0 7% 7%;
     aspect-ratio: 7/3;
     
@@ -87,6 +155,7 @@ footer {
         font-family: 'Shrikhand', cursive;
         font-size: 2em;
         font-weight: 100;
+        color: $couleur-police-footer;
     }
     ul{
         list-style-type: none;
@@ -94,6 +163,11 @@ footer {
         margin: 0;
         li{
             margin: 2% 0 2% 0;
+            font-size: 3em;
+            color: $couleur-police-footer;
+            &:hover{
+                color: $primaire;
+            }
         }
     }
 }
