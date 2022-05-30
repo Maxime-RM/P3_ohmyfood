@@ -13,7 +13,6 @@ a:hover {
 
 p {
   margin: 1% 0 1% 0;
-  font-size: 1.5rem;
 }
 
 header {
@@ -34,6 +33,7 @@ header h1 {
 }
 
 .img-restaurant {
+  object-fit: cover;
   aspect-ratio: 4/3;
   width: 100%;
 }
@@ -89,6 +89,21 @@ h3:after {
   margin: 3% 0 3% 0;
   padding: 3%;
   box-shadow: 1px 5px 35px rgba(0, 0, 0, 0.4588235294);
+  font-size: 2.7em;
+}
+
+.article-menu-1 {
+  animation: apparition 1s both;
+}
+
+.article-menu-2 {
+  animation: apparition 1s both;
+  animation-delay: 0.1s;
+}
+
+.article-menu-3 {
+  animation: apparition 1s both;
+  animation-delay: 0.2s;
 }
 
 .plat {
@@ -98,9 +113,6 @@ h3:after {
 .box-menu {
   display: flex;
   justify-content: space-between;
-}
-.box-menu p {
-  font-size: 2.7em;
 }
 
 .prix {
@@ -147,6 +159,18 @@ footer ul li {
 }
 footer ul li:hover {
   color: #9356DC;
+}
+
+/*ANIMATION*/
+@keyframes apparition {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
