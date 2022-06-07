@@ -1,3 +1,5 @@
+/*********************************************COULEUR**********************************************/
+/**************************************************************************************************/
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -5,40 +7,52 @@ body {
 
 a {
   text-decoration: none;
-  color: #000000;
-}
-a:hover {
-  color: #9356DC;
 }
 
-p {
-  margin: 1% 0 1% 0;
-}
-
-header {
+.header {
   text-align: center;
-  background-color: #f5f5f5;
   padding: 2%;
 }
-header .fa-arrow-left-long {
+.header_acceuille {
+  box-shadow: 5px 5px 20px 0px rgb(201, 199, 199);
+  position: relative;
+  z-index: 1;
+}
+.header_menu {
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+}
+
+.fa-arrow-left-long {
   font-size: 5em;
   float: left;
   line-height: 125%;
   margin: 0 0 0 3%;
 }
-header h1 {
+
+h1 {
   font-family: "Shrikhand", cursive;
   font-size: 4em;
   margin: 0;
 }
 
-.img-restaurant {
-  object-fit: cover;
-  aspect-ratio: 4/3;
-  width: 100%;
+.section_acceuille {
+  padding: 12% 5%;
 }
-
-section {
+.section_acceuille_reservation {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 15% 0%;
+}
+.section_acceuille_fonctionnement {
+  justify-content: center;
+}
+.section_acceuille_restaurant {
+  background-color: #f5f5f5;
+}
+.section_menu {
   background-color: #f5f5f5;
   border-radius: 12%/4%;
   border-bottom-left-radius: 0;
@@ -48,10 +62,143 @@ section {
   position: relative;
 }
 
-h2 {
+.titre-h2 {
+  margin: 0%;
+}
+.titre-h2_acceuille {
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 5%;
+}
+.titre-h2_menu {
   font-family: "Shrikhand", cursive;
   font-size: 4em;
+}
+
+.lien:hover {
+  color: #9356DC;
+}
+
+.article {
+  box-shadow: 5px 5px 20px 0px rgb(201, 199, 199);
+  border-radius: 6%/30%;
+  padding: 7%;
+  margin: 5%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.article_acceuille {
+  display: flex;
+  justify-content: space-around;
+}
+.article_acceuille:hover {
+  background-color: rgb(245, 237, 255);
+  box-shadow: 5px 5px 20px 5px rgb(112, 112, 112);
+}
+.article_acceuille_carte-restaurant {
+  margin: 5% 0;
+  border-radius: 5%/7%;
+  padding: 0;
+  text-align: start;
+}
+.article_menu {
+  text-align: start;
+  background-color: #ffffff;
+  border-radius: 5%/20%;
+  margin: 3% 0 3% 0;
+  padding: 3%;
+  /*overflow: hidden;
+  text-overflow: ellipsis;*/
+}
+.article_menu:hover {
+  animation: selection 1s both;
+}
+.article_menu--1 {
+  animation: apparition 1s both;
+}
+.article_menu--2 {
+  animation: apparition 1s both;
+  animation-delay: 1s;
+}
+.article_menu--3 {
+  animation: apparition 1s both;
+  animation-delay: 2s;
+}
+
+.paragraphe {
+  font-size: 2.8em;
+  margin: 1% 0 1% 0;
+}
+.paragraphe_acceuille_localisation {
+  aspect-ratio: 6/1;
+  display: flex;
+  background-color: #e7e6e6;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
   margin: 0;
+}
+.paragraphe_acceuille_reservation {
+  font-size: 2.5em;
+}
+.paragraphe_acceuille_fonctionnement {
+  font-weight: bold;
+}
+.paragraphe_acceuille_fonctionnement_icones {
+  color: #8f8f8f;
+  font-size: 4.5em;
+}
+.paragraphe_acceuille_lieu-restaurants {
+  margin: 0;
+}
+.paragraphe_menu_plat {
+  font-weight: bold;
+}
+.paragraphe_menu_prix {
+  font-weight: bold;
+}
+
+.btn {
+  color: #ffffff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-align: center;
+  box-shadow: 5px 5px 20px 0px rgb(201, 199, 199);
+}
+.btn_acceuille {
+  font-size: 2.5em;
+  margin: 7% auto 0 auto;
+  padding: 4% 4%;
+  width: 50%;
+  border-radius: 10%/50%;
+}
+.btn_menu {
+  font-size: 3em;
+  margin: 10% auto 20% auto;
+  padding: 4% 7%;
+  width: 40%;
+  border-radius: 15%/50%;
+}
+.btn:hover {
+  background: linear-gradient(#ff79b1, #b656dc);
+  box-shadow: 5px 5px 20px 5px rgb(112, 112, 112);
+  transition: 0.5s;
+}
+
+.img-restaurant {
+  object-fit: cover;
+  width: 100%;
+}
+.img-restaurant_acceuille {
+  aspect-ratio: 5/3;
+  border-radius: 5%/7%;
+}
+.img-restaurant_menu {
+  aspect-ratio: 4/3;
+}
+
+.description-restaurant {
+  font-size: 3em;
+  padding: 3% 4%;
 }
 
 .nom-restaurant {
@@ -68,46 +215,22 @@ h2 {
   margin: 0 0 10% 0;
 }
 
-h3 {
+.titre-h3_acceuille {
+  margin: 0;
+}
+.titre-h3_menu {
   position: relative;
   margin: 7% 0 7% 0;
+  font-size: 2em;
 }
-
-h3:after {
+.titre-h3_menu:after {
   content: "";
   position: absolute;
   width: 13%;
   height: 1px;
-  bottom: -1.2em;
+  bottom: -1em;
   left: 0;
-  border-bottom: 0.5em solid #99E2D0;
-}
-
-.article-menu {
-  background-color: #ffffff;
-  border-radius: 5%/20%;
-  margin: 3% 0 3% 0;
-  padding: 3%;
-  box-shadow: 1px 5px 35px rgba(0, 0, 0, 0.4588235294);
-  font-size: 2.7em;
-}
-
-.article-menu-1 {
-  animation: apparition 1s both;
-}
-
-.article-menu-2 {
-  animation: apparition 1s both;
-  animation-delay: 0.1s;
-}
-
-.article-menu-3 {
-  animation: apparition 1s both;
-  animation-delay: 0.2s;
-}
-
-.plat {
-  font-weight: bold;
+  border-bottom: 0.4em solid #99E2D0;
 }
 
 .box-menu {
@@ -115,35 +238,15 @@ h3:after {
   justify-content: space-between;
 }
 
-.prix {
-  font-weight: bold;
-}
-
-.btn {
-  color: #ffffff;
-  font-size: 3em;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 15%/50%;
-  margin: 10% auto 20% auto;
-  padding: 4% 7% 4% 7%;
-  text-align: center;
-  width: 40%;
-  box-shadow: 1px 5px 35px rgba(0, 0, 0, 0.4588235294);
-}
-.btn:hover {
-  background: linear-gradient(#ff79b1, #b656dc);
-  box-shadow: 1px 5px 45px #000000;
-}
-
 footer {
   background-color: #313131;
   padding: 7% 0 7% 7%;
   aspect-ratio: 7/3;
+  font-size: 3em;
 }
 footer h4 {
   margin: 0 0 5% 0;
   font-family: "Shrikhand", cursive;
-  font-size: 2em;
   font-weight: 100;
   color: #ffffff;
 }
@@ -154,7 +257,6 @@ footer ul {
 }
 footer ul li {
   margin: 2% 0 2% 0;
-  font-size: 3em;
   color: #ffffff;
 }
 footer ul li:hover {
@@ -170,6 +272,14 @@ footer ul li:hover {
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes selection {
+  from {
+    padding-right: 3%;
+  }
+  to {
+    padding-right: 20%;
   }
 }
 

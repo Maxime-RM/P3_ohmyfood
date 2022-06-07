@@ -1,3 +1,5 @@
+/*********************************************COULEUR**********************************************/
+
 $primaire: #9356DC;
 $primaire-claire: #b656dc;
 
@@ -7,9 +9,10 @@ $secondaire-claire: #ff79b1;
 $tertiaire: #99E2D0;
 
 $couleur-background: #f5f5f5;
+$couleur-background-sombre: #e7e6e6;
 
-$couleur-box-shadow: 1px 5px 35px #00000075;
-$couleur-box-shadow-sombre: 1px 5px 45px #000000;
+$couleur-box-shadow: 5px 5px 20px 0px rgb(201 199 199);
+$couleur-box-shadow-sombre: 5px 5px 20px 5px rgb(112 112 112);
 
 $couleur-lien: #000000;
 
@@ -20,6 +23,10 @@ $couleur-police-btn: #ffffff;
 $couleur-footer: #313131;
 $couleur-police-footer: #ffffff;
 
+$couleur-fonctionnement-icones: #8f8f8f;
+$couleur-article-acceuille: rgb(245, 237, 255);
+/**************************************************************************************************/
+
 
 body{
     margin: 0;
@@ -29,45 +36,61 @@ body{
 
 a{
     text-decoration: none;
-    color: $couleur-lien;
-    &:hover{
-        color: $primaire;
-        
-    }
 }
 
+.header{
 
-p{
-    margin: 1% 0 1% 0;
-}
-
-
-header{
     text-align: center;
-    background-color: $couleur-background;
     padding: 2%;
-    .fa-arrow-left-long{
-        font-size: 5em;
-        float: left;
-        line-height: 125%;
-        margin: 0 0 0 3%;
-    }    
-    h1{
-        font-family: 'Shrikhand', cursive;
-        font-size: 4em;
-        margin: 0;
+
+    &_acceuille{
+        box-shadow: $couleur-box-shadow;
+        position: relative;
+        z-index: 1;
     }
+
+    &_menu{        
+        background-color: $couleur-background;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+    }    
+}
+.fa-arrow-left-long{
+    font-size: 5em;
+    float: left;
+    line-height: 125%;
+    margin: 0 0 0 3%;
+}
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 4em;
+    margin: 0;
 }
 
 
-.img-restaurant{
-    object-fit: cover;
-    aspect-ratio: 4/3;
-    width: 100%;
-}
+.section{
 
+    &_acceuille{
 
-section{
+        padding: 12% 5%;
+
+        &_reservation{
+            
+            background-color: $couleur-background;
+            text-align: center;
+            padding: 15% 0%;
+        }
+        &_fonctionnement{
+            justify-content: center;
+        }
+        &_restaurant{
+            background-color: $couleur-background;
+        }
+    }
+
+    &_menu{
+
     background-color: $couleur-background;
     border-radius: 12%/4%;
     border-bottom-left-radius: 0;
@@ -75,12 +98,185 @@ section{
     padding: 2% 4% 5% 4%;
     margin-top: -18%;
     position: relative;
+    }
 }
-h2{
+
+.titre-h2{
+
+    margin: 0%;
+
+    &_acceuille{
+        font-weight: bold;
+        font-size: 3em;
+        margin-bottom: 5%;
+    }
+
+    &_menu{
     font-family: 'Shrikhand', cursive;
-    font-size: 4em;
-    margin: 0;
+    font-size: 4em;    
+    }
 }
+.lien{
+    &:hover{
+        color: $primaire;
+    }
+}
+
+.article{
+    
+    box-shadow: $couleur-box-shadow;
+    border-radius: 6%/30%;
+    padding: 7%;
+    margin: 5%;
+    background-color: $couleur-background;
+    text-align: center;
+
+    &_acceuille{
+
+        display: flex;
+        justify-content: space-around;
+
+        &:hover{
+            background-color: $couleur-article-acceuille;  
+            box-shadow: $couleur-box-shadow-sombre;
+        }
+        &_carte-restaurant{
+            margin: 5% 0;
+            border-radius: 5%/7%;
+            padding: 0;
+            text-align: start;
+            
+        }  
+    }
+
+
+    &_menu{
+        text-align: start;
+        background-color: $couleur-article-menu;
+        border-radius: 5% / 20%;
+        margin: 3% 0 3% 0;
+        padding: 3%;        
+        /*overflow: hidden;
+        text-overflow: ellipsis;*/
+        &:hover{
+            animation: selection 1s both;
+        }
+        &--1{
+            animation: apparition 1s both;            
+        }
+        &--2{
+            animation: apparition 1s both;
+            animation-delay: 1s;            
+        }
+        &--3{
+            animation: apparition 1s both;
+            animation-delay: 2s;            
+        }
+    }
+    
+}
+.paragraphe{
+
+    font-size: 2.8em;    
+    margin: 1% 0 1% 0;
+
+    &_acceuille{
+
+        &_localisation{
+
+            aspect-ratio: 6/1;
+            display: flex;
+            background-color: $couleur-background-sombre;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0;
+        }
+        &_reservation{
+
+        font-size: 2.5em;
+        }
+        &_fonctionnement{
+
+            font-weight: bold;
+            &_icones{
+                color: $couleur-fonctionnement-icones;
+                font-size: 4.5em;
+            }
+        }
+        &_lieu-restaurants{
+            margin: 0;
+        }
+    }
+
+    &_menu{
+        &_plat{
+
+        font-weight: bold;
+        }
+        &_prix{
+
+            font-weight: bold;
+        }
+    }
+
+
+    
+    
+    
+    
+}
+.btn {
+    color: $couleur-police-btn;
+    background: linear-gradient($secondaire,$primaire);
+    text-align: center;
+    
+    box-shadow: $couleur-box-shadow;
+    
+    &_acceuille{
+
+        font-size: 2.5em;
+        margin: 7% auto 0 auto;       
+        padding: 4% 4%;
+        width: 50%;
+        border-radius: 10% / 50%;
+    }
+    &_menu{
+        
+        font-size: 3em;
+        margin: 10% auto 20% auto;
+        padding: 4% 7%;
+        width: 40%;
+        border-radius: 15% / 50%;
+    }
+    &:hover{
+        background: linear-gradient($secondaire-claire,$primaire-claire);
+        box-shadow: $couleur-box-shadow-sombre;
+        transition: 0.5s;
+    }
+}
+
+.img-restaurant{
+
+    object-fit: cover;
+    width: 100%;
+
+    &_acceuille{
+        aspect-ratio: 5/3;
+        border-radius: 5%/7%;
+    }
+
+    &_menu{        
+        aspect-ratio: 4/3;
+    }
+}
+
+.description-restaurant{
+
+    font-size: 3em;
+    padding: 3% 4%;
+}
+
 .nom-restaurant{
     padding: 8% 2% 8% 0;
     display: flex;
@@ -93,77 +289,47 @@ h2{
     margin: 0 0 10% 0;
 }
 
-h3{
-    position: relative;
-    margin: 7% 0 7% 0;
-}
-h3:after{ 
-    content: ""; 
-    position: absolute; 
-    width: 13%; 
-    height: 1px; 
-    bottom: -1.2em; 
-    left: 0; 
-    border-bottom: 0.5em solid $tertiaire; 
+.titre-h3{
+
+    &_acceuille{
+        margin: 0;
+    }
+    
+    &_menu{
+        
+        position: relative;
+        margin: 7% 0 7% 0;
+        font-size: 2em;
+        &:after{
+            content: ""; 
+            position: absolute; 
+            width: 13%; 
+            height: 1px; 
+            bottom: -1em; 
+            left: 0; 
+            border-bottom: 0.4em solid $tertiaire; 
+
+        }
+    }
 }
 
-.article-menu{
-    background-color: $couleur-article-menu;
-    border-radius: 5% / 20%;
-    margin: 3% 0 3% 0;
-    padding: 3%;
-    box-shadow: $couleur-box-shadow;
-    font-size: 2.7em;
-    
-}
-.article-menu-1{
-    animation: apparition 1s both;
-}
-.article-menu-2{
-    animation: apparition 1s both;
-    animation-delay: .1s;
-}
-.article-menu-3{
-    animation: apparition 1s both;
-    animation-delay: .2s;
-}
-.plat{
-    font-weight: bold;
-}
+
 .box-menu{
     display: flex;
     justify-content: space-between;
 }
-.prix{
-    font-weight: bold;
-}
-.btn {
 
-    color: $couleur-police-btn;
-    font-size: 3em;
-    background: linear-gradient($secondaire,$primaire);
-    border-radius: 15% / 50%;
-    margin: 10% auto 20% auto;
-    padding: 4% 7% 4% 7%;
-    text-align: center;
-    width: 40%;
-    box-shadow: $couleur-box-shadow;
-    &:hover{
-        background: linear-gradient($secondaire-claire,$primaire-claire);
-        box-shadow: $couleur-box-shadow-sombre;
-    }
-}
 
 footer {
     
     background-color: $couleur-footer;
     padding: 7% 0 7% 7%;
     aspect-ratio: 7/3;
+    font-size: 3em;
     
     h4{
         margin: 0 0 5% 0;
         font-family: 'Shrikhand', cursive;
-        font-size: 2em;
         font-weight: 100;
         color: $couleur-police-footer;
     }
@@ -173,7 +339,6 @@ footer {
         margin: 0;
         li{
             margin: 2% 0 2% 0;
-            font-size: 3em;
             color: $couleur-police-footer;
             &:hover{
                 color: $primaire;
@@ -193,5 +358,14 @@ footer {
     to{
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+@keyframes selection {
+
+    from{
+        padding-right: 3%;
+    }
+    to{
+        padding-right: 20%;
     }
 }
