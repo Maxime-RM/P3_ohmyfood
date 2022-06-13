@@ -66,7 +66,6 @@ a{
     &_acceuille{
         box-shadow: $couleur-box-shadow;
         position: relative;
-        z-index: 1;
     }
 
     &_menu{        
@@ -89,6 +88,64 @@ h1{
 }
 
 
+.paragraphe{
+   
+    margin: 1% 0 1% 0;
+
+    &_acceuille{
+
+        &_localisation{
+
+            aspect-ratio: 6/1;
+            display: flex;
+            background-color: $couleur-background-sombre;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0;
+            font-size: 2.8em;
+        }
+        &_reservation{
+
+        font-size: 2.5em;
+        }
+        &_fonctionnement{
+
+            font-weight: bold;
+            
+            &::before{
+                content: counter(count);
+                counter-increment: count;
+                position: absolute;
+                font-size: 0.7em;
+                background-color: $primaire;
+                color: $couleur-police-btn;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 7%;
+            }
+        }
+        &_lieu-restaurants{
+            margin: 0;
+        }
+    }
+
+    &_menu{
+        &_plat{
+
+        font-weight: bold;
+        }
+        &_prix{
+
+            font-weight: bold;
+        }
+    }    
+}
+
 .section{
 
     &_acceuille{
@@ -99,7 +156,6 @@ h1{
             
             background-color: $couleur-background;
             text-align: center;
-            padding: 15% 0%;
         }
         &_fonctionnement{
             justify-content: center;
@@ -170,7 +226,22 @@ h1{
             border-radius: 5%/7%;
             padding: 0;
 
-            &_nouveau{
+            &_nouveau-1{
+                &::before{
+                    content: "Nouveau";
+                    position: absolute;
+                    background-color: $tertiaire;
+                    color: $tertiaire-sombre;
+                    padding: 1% 3%;
+                    margin: 2%;
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    right: 5%;
+                }
+
+            }
+            &_nouveau-2{
                 &::before{
                     content: "Nouveau";
                     position: absolute;
@@ -197,6 +268,14 @@ h1{
         margin: 3% 0 3% 0;
         padding: 3%;
         font-size: 2.5em;
+        &_sous-article{
+            width: 100%;
+            height: 100%;
+            &:hover{
+                animation: selection 1.5s both;
+            }
+            
+        }
         
         &--1{
             animation: apparition 1s both;            
@@ -213,69 +292,7 @@ h1{
     }
     
 }
-.paragraphe{
-   
-    margin: 1% 0 1% 0;
 
-    &_acceuille{
-
-        &_localisation{
-
-            aspect-ratio: 6/1;
-            display: flex;
-            background-color: $couleur-background-sombre;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin: 0;
-            font-size: 2.8em;
-        }
-        &_reservation{
-
-        font-size: 2.5em;
-        }
-        &_fonctionnement{
-
-            font-weight: bold;
-            
-            &::before{
-                content: counter(count);
-                counter-increment: count;
-                position: absolute;
-                font-size: 0.7em;
-                background-color: $primaire;
-                color: $couleur-police-btn;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                left: 7%;
-            }
-        }
-        &_lieu-restaurants{
-            margin: 0;
-        }
-    }
-
-    &_menu{
-        &_plat{
-
-        font-weight: bold;
-        }
-        &_prix{
-
-            font-weight: bold;
-        }
-    }
-
-
-    
-    
-    
-    
-}
 .btn {
     color: $couleur-police-btn;
     background: linear-gradient($secondaire,$primaire);
@@ -465,21 +482,9 @@ footer {
 .lettre:nth-child(7){
     animation-delay: 0.7s;
 }
-.lettre:nth-child(8){
-    animation-delay: 0.8s;
-}
-.lettre:nth-child(9){
-    animation-delay: 0.9s;
-}
-.lettre:nth-child(10){
-    animation-delay: 1s;
-}
 
 @keyframes disparition {
 
-    0%{
-        opacity: 1;
-    }
     50%{
         opacity: 1;
         height: 100%;
@@ -487,5 +492,13 @@ footer {
     100%{
         opacity: 0;
         height: 0%;
+    }
+}
+@keyframes selection {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 80%;
     }
 }
