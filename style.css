@@ -196,23 +196,16 @@ h1 {
   padding: 3%;
   font-size: 2.5em;
 }
-.article_menu_sous-article {
-  width: 100%;
-  height: 100%;
-}
-.article_menu_sous-article:hover {
-  animation: selection 1.5s both;
-}
 .article_menu--1 {
   animation: apparition 1s both;
 }
 .article_menu--2 {
   animation: apparition 1s both;
-  animation-delay: 1s;
+  animation-delay: 0.1s;
 }
 .article_menu--3 {
   animation: apparition 1s both;
-  animation-delay: 2s;
+  animation-delay: 0.2s;
 }
 
 .btn {

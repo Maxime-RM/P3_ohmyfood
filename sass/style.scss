@@ -268,25 +268,17 @@ h1{
         margin: 3% 0 3% 0;
         padding: 3%;
         font-size: 2.5em;
-        &_sous-article{
-            width: 100%;
-            height: 100%;
-            &:hover{
-                animation: selection 1.5s both;
-            }
-            
-        }
-        
+                
         &--1{
             animation: apparition 1s both;            
         }
         &--2{
             animation: apparition 1s both;
-            animation-delay: 1s;            
+            animation-delay: 0.1s;            
         }
         &--3{
             animation: apparition 1s both;
-            animation-delay: 2s;            
+            animation-delay: 0.2s;            
         }
         
     }
