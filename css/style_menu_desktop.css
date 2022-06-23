@@ -1,0 +1,93 @@
+/*--------------------------------------------------DEBUT HEADER*/
+header {
+  display: block;
+  font-size: 1rem;
+}
+header .title_arrow {
+  display: none;
+}
+
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.img_restaurant {
+  display: none;
+}
+
+.menu_section {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.subtilte {
+  font-size: 2rem;
+}
+.subtilte_like {
+  font-size: 2em;
+}
+
+.card-menu_starter {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 0;
+}
+.card-menu_dish {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 0;
+}
+.card-menu_dessert {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 0;
+}
+.card-menu_category {
+  font-size: 2rem;
+  margin-left: 10%;
+}
+.card-menu_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-menu_frame {
+  width: 65%;
+}
+.card-menu_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-menu_check {
+  font-size: 2rem;
+}
+
+.entitled_1 {
+  font-size: 1.75rem;
+}
+.entitled_2 {
+  font-size: 1.75rem;
+}
+.entitled_3 {
+  font-size: 1.75rem;
+}
+
+.button {
+  padding: 0.75em 1.5em;
+  border-radius: 35px/50%;
+  font-size: 1.5rem;
+}
+
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer_container {
+  font-size: 1.5rem;
+  padding: 1em 0em 1em 2em;
+}
+.footer_title {
+  font-size: 2rem;
+}
+
+/*--------------------------------------------------FIN FOOTER*/
+
+/*# sourceMappingURL=style_menu_desktop.css.map */

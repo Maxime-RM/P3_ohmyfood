@@ -1,0 +1,165 @@
+@import "mixin.scss";
+@import "variables.scss";
+@import "animation.scss";
+body{
+    @include margin-padding-none;
+    @include font-two;
+}
+.anchor{
+    text-decoration: none;
+    &_header{
+        color: $font-color-darker;        
+    }
+    &_footer{
+        color: $font-color-clearer;
+    }
+    &:hover{
+        color: $color-primary;
+    }
+}
+.like{
+    @include like;
+}
+/*--------------------------------------------------DEBUT HEADER*/
+header{
+    @include header;
+}
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.img_restaurant{
+    @include img_restaurant;
+}
+.menu{
+    &_section{
+        background-color: $background-color-darker;
+        padding: 3em 3em 15em 3em;
+        margin-top: -5em;
+        border-top-left-radius: 75px;
+        border-top-right-radius: 75px;
+        position: relative;
+    }
+}
+.subtilte{
+    padding: 0 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    &_restaurant{
+        @include font-one;
+        margin: 0;
+    }
+    &_subsection{
+        &_icon{
+            display: flex;
+            aspect-ratio: 1/1;
+            width: 10%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &_like{
+        font-size: 5rem;
+
+    }
+}
+.card-menu{
+    &_starter{
+        @include card-menu-margin;
+    }
+    &_dish{
+        @include card-menu-margin;
+    }
+    &_dessert{
+        @include card-menu-margin;
+    }    
+    &_category{
+        font-size: 3rem;
+        position: relative;
+        margin-bottom: 1.5em;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 13%;
+            height: 10px;
+            bottom: -0.3em;
+            left: 0;
+            background-color: $color-tertiary;
+        }
+    }
+    &_container{
+        font-size: 3rem;        
+    }
+    &_frame{
+        display: flex;
+        background-color: $background-color-clearer;
+        @include border-radius;
+        margin-bottom: 0.7em;
+        overflow: hidden;
+        box-shadow: $box-shadow-clearer;        
+        animation: appear 1s both;
+        &_1{
+            animation-delay: 0.5s;            
+        } 
+        &_2{
+            animation-delay: 0.75s;
+        } 
+        &_3{
+            animation-delay: 1s;
+        }         
+    }    
+    &_description{
+        width: 100%;
+        margin: 0.5em 0 0.5em 0.5em;
+        &:hover{
+            width: 78%;
+            transition: 1s;
+        }
+        &_subsection{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 5%;
+        }
+    }
+    &_check{
+        color: $font-color-clearer;
+        font-size: 4rem;
+        background-color: $color-tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        @include border-radius;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+        overflow: hidden;
+        margin-right: -20%;
+    }
+}
+.entitled{    
+    margin: 0.2em;
+    &_1{
+        font-weight: bold;
+    }
+    &_2{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 2.7rem;
+    }
+    &_3{
+        font-weight: bold;
+        margin-left: 2%;        
+        font-size: 2.7rem;
+    }
+}
+.button{
+    @include button;
+}
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer{
+    @include footer;
+}
+/*--------------------------------------------------FIN FOOTER*/

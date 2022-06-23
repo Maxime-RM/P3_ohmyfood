@@ -1,0 +1,117 @@
+@keyframes like {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+/*--------------------------------------------------DEBUT HEADER*/
+header {
+  display: block;
+  font-size: 1rem;
+}
+header .title_arrow {
+  display: none;
+}
+
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.section_location {
+  padding: 1em;
+  font-size: 1rem;
+}
+.section_discovery {
+  font-size: 1.5rem;
+  padding: 0% 5%;
+  aspect-ratio: unset;
+}
+.section_discovery .button {
+  padding: 0.75em 1.5em;
+  border-radius: 35px/50%;
+  font-size: 1.5rem;
+}
+.section_functioning {
+  padding: 0% 5%;
+}
+.section_restaurant {
+  background-color: #dddddd;
+  padding: 5%;
+}
+
+.align-section {
+  display: flex;
+}
+.align-section .section_discovery {
+  width: 50%;
+}
+.align-section .section_functioning {
+  width: 50%;
+}
+.align-section .restaurant_frame {
+  width: 50%;
+  margin: 1em;
+}
+
+.location_icon {
+  width: 5%;
+}
+.location_district {
+  margin: 0%;
+}
+
+.discovery_header {
+  font-size: 2rem;
+}
+
+.functioning_title {
+  font-size: 2rem;
+}
+.functioning_frame {
+  width: 75%;
+  aspect-ratio: 5/1;
+  font-size: 1.5rem;
+}
+.functioning_frame_1::before {
+  left: 55%;
+  width: 2.5%;
+}
+.functioning_frame_2::before {
+  left: 55%;
+  width: 2.5%;
+}
+.functioning_frame_3::before {
+  left: 55%;
+  width: 2.5%;
+}
+.functioning_icons {
+  font-size: 2rem;
+}
+
+.restaurant_title {
+  font-size: 2rem;
+}
+.restaurant_subsection {
+  font-size: 1.5rem;
+}
+.restaurant_subsection_icon {
+  font-size: 2rem;
+}
+
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer_container {
+  font-size: 1.5rem;
+  padding: 1em 0em 1em 2em;
+}
+.footer_title {
+  font-size: 2rem;
+}
+
+/*--------------------------------------------------FIN FOOTER*/
+
+/*# sourceMappingURL=style_acceuil_desktop.css.map */

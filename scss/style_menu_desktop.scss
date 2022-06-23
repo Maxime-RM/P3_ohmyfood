@@ -1,0 +1,85 @@
+@import "mixin.scss";
+@import "variables.scss";
+@import "animation.scss";
+/*--------------------------------------------------DEBUT HEADER*/
+header{
+    @include header-desktop;
+}
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.img_restaurant{
+    display: none;
+}
+.menu{
+    &_section{
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+.subtilte{
+    font-size: 2rem;
+    &_like{
+        font-size: 2em;
+
+    }
+}
+.card-menu{
+    &_starter{
+        width: 100%;
+        padding: 1em;
+        @include card-menu-margin-desktop;
+    }
+    &_dish{
+        width: 100%;
+        padding: 1em;
+        @include card-menu-margin-desktop;
+    }
+    &_dessert{
+        width: 100%;
+        padding: 1em;
+        @include card-menu-margin-desktop;
+    }    
+    &_category{
+        font-size: 2rem;
+        margin-left: 10%;
+    }
+    &_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_frame{
+        width: 65%;
+    }  
+    &_description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &_check{
+        font-size: 2rem;
+    }
+}
+.entitled{
+    &_1{
+        font-size: 1.75rem;
+    }
+    &_2{
+        font-size: 1.75rem;
+    }
+    &_3{       
+        font-size: 1.75rem;
+    }
+}
+.button{
+    @include button-desktop;
+}
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer{
+
+    @include footer-desktop;
+
+}
+/*--------------------------------------------------FIN FOOTER*/

@@ -1,0 +1,232 @@
+@import "mixin.scss";
+@import "variables.scss";
+@import "animation.scss";
+body{
+    @include margin-padding-none;
+    @include font-two;
+}
+.anchor{
+    text-decoration: none;
+    &_header{
+        color: $font-color-darker;        
+    }
+    &_footer{
+        color: $font-color-clearer;
+    }
+    &:hover{
+        color: $color-primary;
+    }
+}
+.like{
+    @include like;
+}
+.loader{
+
+    position: absolute;
+    background: linear-gradient($color-secondary, $color-primary);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: disappearance 3s both;
+    .lettre{
+        font-size: 6em;
+        font-weight: bold;
+        color: $font-color-clearer;
+        letter-spacing: 50px;
+        animation: loading 1.5s linear infinite;
+    }
+}
+/*--------------------------------------------------DEBUT HEADER*/
+header{
+    @include header;
+    .title_arrow{
+        display: none;
+    }
+}
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.section{
+    &_location{
+        background-color: $background-color-darker-than-darker;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 5%;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    &_discovery{
+        background-color: $background-color-darker;
+        display: flex;        
+        align-items: center;        
+        justify-content: space-evenly;
+        text-align: center;        
+        flex-direction: column;        
+        padding: 10%;
+        font-size: 2rem;
+        aspect-ratio: 5/4;
+        .button{
+            @include button;
+        }
+    }
+    &_functioning{       
+        padding: 5%;
+    }
+    &_restaurant{
+        background-color: $background-color-darker;
+        padding: 5%;
+    }
+}
+.location{
+    &_icon{
+        width: 5%;
+    }
+    &_district{
+        margin: 0% 5%;
+    }
+}
+.discovery{
+    &_header{
+        margin: 0%;
+        font-weight: bold;
+        @include font-size-title-acceuil;
+    }
+    &_text{
+        margin: 0%;
+    }    
+}
+.functioning{
+    &_title{
+        font-weight: bold;
+        @include font-size-title-acceuil;
+    }
+    &_frame{
+        background-color: $background-color-darker;
+        display: flex;
+        align-items: center;
+        aspect-ratio: 4/1;
+        border-radius: 5%/25%;
+        margin: 0 auto 5% auto;
+        font-size: 2.5rem;
+        box-shadow: $box-shadow-clearer;
+        font-weight: bold;
+        padding: 0% 10%;
+        &_1{
+            &::before{
+            content: "1";
+            position: absolute;
+            left: 3%;
+            background-color: $color-primary;
+            aspect-ratio: 1/1;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $font-color-clearer;
+            }
+        }
+        &_2{
+            &::before{
+            content: "2";
+            position: absolute;
+            left: 3%;
+            background-color: $color-primary;
+            aspect-ratio: 1/1;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $font-color-clearer;
+            }
+        }    
+        &_3{
+            &::before{
+            content: "3";
+            position: absolute;
+            left: 3%;
+            background-color: $color-primary;
+            aspect-ratio: 1/1;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $font-color-clearer;
+            }
+        }
+        &:hover{
+            background-color: $color-primary-clearer-than-clearer;
+        }    
+    }
+    &_icons{
+        margin-right: 7.5%;
+        color: $font-color-medium;
+        font-size: 3.5rem;
+    }
+    &_text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+.restaurant{
+    &_title{
+        @include font-size-title-acceuil;
+    }
+    &_frame{
+        background-color: $background-color-clearer;
+        @include border-radius;
+        margin-bottom: 5%;
+        box-shadow: $box-shadow-clearer;
+        .img_restaurant{
+            @include img_restaurant;
+            &_acceuil{
+                aspect-ratio: 7/3;
+                @include border-radius;
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+            }
+        }
+    }
+    &_subsection{
+        font-size: 3rem;
+        display: flex;
+        &_text{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            justify-content: center;
+            padding-left: 5%;
+
+        }        
+        &_icon{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+        }
+    }
+    &_name{
+        margin: 5% 0% 2.5% 0%;
+        font-weight: bold;
+    }
+    &_location{
+        margin: 0% 0% 5% 0%;
+    }    
+}
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer{
+
+    @include footer;
+
+}
+/*--------------------------------------------------FIN FOOTER*/

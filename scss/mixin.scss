@@ -1,0 +1,140 @@
+@mixin margin-padding-none{
+    padding: 0%;
+    margin: 0%;
+}
+@mixin font-one{
+    font-family: "Shrikhand";
+}
+@mixin font-two{    
+    font-family: "Roboto";
+}
+@mixin header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    font-size: 2.2rem;
+    .title{
+        &_arrow{            
+            font-size: 4rem
+        }    
+        &_logo{    
+            @include font-one;
+            margin: auto;    
+        }
+    }    
+}
+@mixin header-desktop {    
+    display: block;
+    font-size: 1rem;
+    .title{
+        &_arrow{
+            display: none;
+        }
+    }    
+}
+@mixin like {    
+    position: absolute;   
+    &_1{
+        background: linear-gradient($color-primary,$color-secondary);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+
+    }
+    &_2{
+        background-color: $background-color-clearer;
+        &_menu{
+            background-color: $background-color-darker;
+        }
+        &:hover{
+            animation: like 0.5s both;
+        }        
+    }    
+}
+@mixin button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 1em 1.5em;
+    border-radius: 70px/50%;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: $font-color-clearer;
+    font-weight: bold;    
+    font-size: 2.5rem;
+    box-shadow: $box-shadow-clearer;
+    &:hover{
+        box-shadow: $box-shadow-darker;
+        background: linear-gradient($color-secondary-clearer, $color-primary-clearer);
+    }    
+}
+@mixin button-desktop {
+    padding: 0.75em 1.5em;
+    border-radius: 35px/50%;
+    font-size: 1.5rem; 
+}
+@mixin background-linear-gradient{
+    background: linear-gradient($color-secondary,$color-primary);
+}
+@mixin background-linear-gradient-clearer{
+    background: linear-gradient($color-secondary-clearer,$color-primary-clearer);
+}
+@mixin font-size-title-acceuil {
+    font-size: 3rem;    
+}
+@mixin font-size-title-acceuil-desktop {
+    font-size: 2rem;    
+}
+@mixin img_restaurant {    
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;    
+}
+@mixin card-menu-margin{
+    margin-bottom: 5em;    
+}
+@mixin card-menu-margin-desktop{
+    margin-bottom: 0;    
+}
+@mixin border-radius{
+    border-radius: 40px;
+}
+@mixin footer{
+    &_container{
+        font-size: 2.5rem;
+        background-color: $footer-background-color;
+        padding: 1.5em;
+    }
+    &_title{
+        @include font-one;
+        color: $font-color-clearer;
+        margin: 0%;
+        font-size: 3rem;
+        font-weight: normal;
+    }
+    &_list{
+        list-style: none;
+        padding: 0%;
+    }
+    &_list-bloc{
+        display: flex;
+        align-items: center;
+    }
+    &_icons{
+        width: 1em;
+        margin-right: 0.75em;
+    }
+    &_list-text{
+        margin: 0.2em;
+    }    
+}
+@mixin footer-desktop{
+    &_container{
+        font-size: 1.5rem;
+        padding: 1em 0em 1em 2em;
+    }
+    &_title{
+        font-size: 2rem;
+    }   
+}

@@ -1,0 +1,106 @@
+@import "mixin.scss";
+@import "variables.scss";
+@import "animation.scss";
+/*--------------------------------------------------DEBUT HEADER*/
+header{
+    @include header-desktop;
+}
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.section{
+    &_location{
+        padding: 1em;
+        font-size: 1rem;
+    }
+    &_discovery{
+        font-size: 1.5rem;        
+        padding: 0% 5%;
+        aspect-ratio: unset;
+        .button{
+            @include button-desktop;
+        }
+    }
+    &_functioning{       
+        padding: 0% 5%;
+    }
+    &_restaurant{
+        background-color: $background-color-darker-than-darker;
+        padding: 5%;
+    }
+}
+.align-section{
+    display: flex;
+    .section_discovery{
+        width: 50%;
+    }
+    .section_functioning{
+        width: 50%;
+    }
+    .restaurant_frame{
+        width: 50%;
+        margin: 1em;
+    }
+}
+.location{
+    &_icon{
+        width: 5%;
+    }
+    &_district{
+        margin: 0%;
+    }
+}
+.discovery{
+    &_header{
+        @include font-size-title-acceuil-desktop;
+    }    
+}
+.functioning{
+    &_title{
+        @include font-size-title-acceuil-desktop;
+    }
+    &_frame{
+        width: 75%;
+        aspect-ratio: 5/1;
+        font-size: 1.5rem;
+        &_1{
+            &::before{
+            left: 55%;
+            width: 2.5%;
+            }
+        }
+        &_2{
+            &::before{
+            left: 55%;
+            width: 2.5%;
+            }
+        }    
+        &_3{
+            &::before{
+            left: 55%;
+            width: 2.5%;
+            }
+        }   
+    }
+    &_icons{
+        font-size: 2rem;
+    }
+}
+.restaurant{
+    &_title{
+        @include font-size-title-acceuil-desktop;
+    }
+    &_subsection{
+        font-size: 1.5rem;       
+        &_icon{
+            font-size: 2rem;
+        }
+    }  
+}
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer{
+
+    @include footer-desktop;
+
+}
+/*--------------------------------------------------FIN FOOTER*/

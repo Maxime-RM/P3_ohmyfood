@@ -1,0 +1,257 @@
+@keyframes like {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes appear {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Roboto";
+}
+
+.anchor {
+  text-decoration: none;
+}
+.anchor_header {
+  color: #000000;
+}
+.anchor_footer {
+  color: #ffffff;
+}
+.anchor:hover {
+  color: #9356dc;
+}
+
+.like {
+  position: absolute;
+}
+.like_1 {
+  background: linear-gradient(#9356dc, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.like_2 {
+  background-color: #ffffff;
+}
+.like_2_menu {
+  background-color: #eeeeee;
+}
+.like_2:hover {
+  animation: like 0.5s both;
+}
+
+/*--------------------------------------------------DEBUT HEADER*/
+header {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  font-size: 2.2rem;
+}
+header .title_arrow {
+  font-size: 4rem;
+}
+header .title_logo {
+  font-family: "Shrikhand";
+  margin: auto;
+}
+
+/*--------------------------------------------------FIN HEADER*/
+/*--------------------------------------------------DEBUT MAIN*/
+.img_restaurant {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.menu_section {
+  background-color: #eeeeee;
+  padding: 3em 3em 15em 3em;
+  margin-top: -5em;
+  border-top-left-radius: 75px;
+  border-top-right-radius: 75px;
+  position: relative;
+}
+
+.subtilte {
+  padding: 0 1em;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+.subtilte_restaurant {
+  font-family: "Shrikhand";
+  margin: 0;
+}
+.subtilte_subsection_icon {
+  display: flex;
+  aspect-ratio: 1/1;
+  width: 10%;
+  align-items: center;
+  justify-content: center;
+}
+.subtilte_like {
+  font-size: 5rem;
+}
+
+.card-menu_starter {
+  margin-bottom: 5em;
+}
+.card-menu_dish {
+  margin-bottom: 5em;
+}
+.card-menu_dessert {
+  margin-bottom: 5em;
+}
+.card-menu_category {
+  font-size: 3rem;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+.card-menu_category::after {
+  content: "";
+  position: absolute;
+  width: 13%;
+  height: 10px;
+  bottom: -0.3em;
+  left: 0;
+  background-color: #99E2D0;
+}
+.card-menu_container {
+  font-size: 3rem;
+}
+.card-menu_frame {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 40px;
+  margin-bottom: 0.7em;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px 0px #cdcdcd;
+  animation: appear 1s both;
+}
+.card-menu_frame_1 {
+  animation-delay: 0.5s;
+}
+.card-menu_frame_2 {
+  animation-delay: 0.75s;
+}
+.card-menu_frame_3 {
+  animation-delay: 1s;
+}
+.card-menu_description {
+  width: 100%;
+  margin: 0.5em 0 0.5em 0.5em;
+}
+.card-menu_description:hover {
+  width: 78%;
+  transition: 1s;
+}
+.card-menu_description_subsection {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+}
+.card-menu_check {
+  color: #ffffff;
+  font-size: 4rem;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  border-radius: 40px;
+  border-bottom-left-radius: 0%;
+  border-top-left-radius: 0%;
+  overflow: hidden;
+  margin-right: -20%;
+}
+
+.entitled {
+  margin: 0.2em;
+}
+.entitled_1 {
+  font-weight: bold;
+}
+.entitled_2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 2.7rem;
+}
+.entitled_3 {
+  font-weight: bold;
+  margin-left: 2%;
+  font-size: 2.7rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  padding: 1em 1.5em;
+  border-radius: 70px/50%;
+  background: linear-gradient(#FF79DA, #9356dc);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  box-shadow: 10px 10px 20px 0px #cdcdcd;
+}
+.button:hover {
+  box-shadow: 10px 10px 20px 5px #5e5e5e;
+  background: linear-gradient(#fc89db, #9d68df);
+}
+
+/*--------------------------------------------------FIN MAIN*/
+/*--------------------------------------------------DEBUT FOOTER*/
+.footer_container {
+  font-size: 2.5rem;
+  background-color: #3d3d3d;
+  padding: 1.5em;
+}
+.footer_title {
+  font-family: "Shrikhand";
+  color: #ffffff;
+  margin: 0%;
+  font-size: 3rem;
+  font-weight: normal;
+}
+.footer_list {
+  list-style: none;
+  padding: 0%;
+}
+.footer_list-bloc {
+  display: flex;
+  align-items: center;
+}
+.footer_icons {
+  width: 1em;
+  margin-right: 0.75em;
+}
+.footer_list-text {
+  margin: 0.2em;
+}
+
+/*--------------------------------------------------FIN FOOTER*/
+
+/*# sourceMappingURL=style_menu.css.map */
