@@ -162,6 +162,9 @@ header{
         }
         &:hover{
             background-color: $color-primary-clearer-than-clearer;
+            .functioning_icons{
+                color: $color-primary;
+            }          
         }    
     }
     &_icons{
@@ -191,6 +194,20 @@ header{
                 @include border-radius;
                 border-bottom-left-radius: 0%;
                 border-bottom-right-radius: 0%;
+            }
+        }
+        &_nouveau{
+            &::before{
+                content: "Nouveau";
+                font-size: 2rem;
+                font-weight: bold;
+                color: $color-tertiary-darker;
+                position: absolute;
+                background-color: $color-tertiary;
+                padding: 0.5em 1em;
+                border-radius: 5px;
+                margin: 1em;
+                right: 5%;
             }
         }
     }

@@ -267,6 +267,9 @@ header .title_arrow {
 .functioning_frame:hover {
   background-color: rgba(146, 86, 220, 0.1843137255);
 }
+.functioning_frame:hover .functioning_icons {
+  color: #9356dc;
+}
 .functioning_icons {
   margin-right: 7.5%;
   color: #808080;
@@ -297,6 +300,18 @@ header .title_arrow {
   border-radius: 40px;
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%;
+}
+.restaurant_frame_nouveau::before {
+  content: "Nouveau";
+  font-size: 2rem;
+  font-weight: bold;
+  color: #467a6d;
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin: 1em;
+  right: 5%;
 }
 .restaurant_subsection {
   font-size: 3rem;

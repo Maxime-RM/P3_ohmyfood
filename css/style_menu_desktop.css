@@ -1,6 +1,76 @@
+@keyframes like {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes appear {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    text-shadow: 100px 100px 10px #9356dc;
+  }
+  90% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 100px 100px 10px #9356dc;
+  }
+}
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+@keyframes disappearance {
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0%;
+  }
+}
 /*--------------------------------------------------DEBUT HEADER*/
 header {
-  display: block;
   font-size: 1rem;
 }
 header .title_arrow {
@@ -10,7 +80,8 @@ header .title_arrow {
 /*--------------------------------------------------FIN HEADER*/
 /*--------------------------------------------------DEBUT MAIN*/
 .img_restaurant {
-  display: none;
+  aspect-ratio: 4/1;
+  margin-bottom: -1%;
 }
 
 .menu_section {
@@ -42,8 +113,13 @@ header .title_arrow {
   margin-bottom: 0;
 }
 .card-menu_category {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 10%;
+}
+.card-menu_category::after {
+  width: 5%;
+  height: 7px;
+  bottom: -0.5em;
 }
 .card-menu_container {
   display: flex;
@@ -63,13 +139,13 @@ header .title_arrow {
 }
 
 .entitled_1 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .entitled_2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .entitled_3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .button {

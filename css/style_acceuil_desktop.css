@@ -10,9 +10,67 @@
     display: none;
   }
 }
+@keyframes appear {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    text-shadow: 100px 100px 10px #9356dc;
+  }
+  90% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 100px 100px 10px #9356dc;
+  }
+}
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+@keyframes disappearance {
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0%;
+  }
+}
 /*--------------------------------------------------DEBUT HEADER*/
 header {
-  display: block;
   font-size: 1rem;
 }
 header .title_arrow {
@@ -54,7 +112,7 @@ header .title_arrow {
 }
 .align-section .restaurant_frame {
   width: 50%;
-  margin: 1em;
+  margin: 1%;
 }
 
 .location_icon {
@@ -94,6 +152,14 @@ header .title_arrow {
 
 .restaurant_title {
   font-size: 2rem;
+}
+.restaurant_frame_nouveau_1::before {
+  right: 51%;
+  font-size: 1.5rem;
+}
+.restaurant_frame_nouveau_2::before {
+  right: 6%;
+  font-size: 1.5rem;
 }
 .restaurant_subsection {
   font-size: 1.5rem;

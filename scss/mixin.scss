@@ -23,8 +23,7 @@
         }
     }    
 }
-@mixin header-desktop {    
-    display: block;
+@mixin header-desktop {
     font-size: 1rem;
     .title{
         &_arrow{

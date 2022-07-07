@@ -8,7 +8,8 @@ header{
 /*--------------------------------------------------FIN HEADER*/
 /*--------------------------------------------------DEBUT MAIN*/
 .img_restaurant{
-    display: none;
+    aspect-ratio: 4/1;
+    margin-bottom: -1%;
 }
 .menu{
     &_section{
@@ -41,8 +42,13 @@ header{
         @include card-menu-margin-desktop;
     }    
     &_category{
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: 10%;
+        &::after{
+            width: 5%;
+            height: 7px;
+            bottom: -0.5em;
+        }
     }
     &_container{
         display: flex;
@@ -63,13 +69,13 @@ header{
 }
 .entitled{
     &_1{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     &_2{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     &_3{       
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 }
 .button{

@@ -38,7 +38,7 @@ header{
     }
     .restaurant_frame{
         width: 50%;
-        margin: 1em;
+        margin: 1%;
     }
 }
 .location{
@@ -88,6 +88,22 @@ header{
 .restaurant{
     &_title{
         @include font-size-title-acceuil-desktop;
+    }
+    &_frame{
+        &_nouveau{
+            &_1{
+                &::before{
+                    right: 51%;
+                    font-size: 1.5rem;
+                }
+            }
+            &_2{
+                &::before{
+                    right: 6%;
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
     &_subsection{
         font-size: 1.5rem;       
